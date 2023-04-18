@@ -1,0 +1,287 @@
+body {
+   margin: 0;
+   padding: 0;
+
+}
+
+.bg-img {
+   opacity: 0.2;
+   position: fixed;
+   z-index: -2;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: auto;
+}
+
+/*============== BARRA DE NAVEGACION ========== */
+
+nav {
+   font-weight: bold;
+   background-image: url('../img/fondo.jpg');
+   background-repeat: repeat;
+   background-size: auto 300px;
+}
+
+nav img {
+   height: 55px;
+   width: auto;
+}
+
+nav a {
+   color: white;
+   text-decoration: none;
+}
+
+nav a:hover {
+   text-shadow: 3px 3px 8px gold;
+}
+
+/* ======= HEADER ========== */
+
+header {
+   text-align: center;
+}
+
+header h1 {
+   color: gray;
+}
+
+header hr {
+   width: 350px;
+   margin: 0 auto;
+   color: black;
+   border: 2px solid;
+}
+
+header h2 {
+   margin: 0 auto;
+}
+
+/* ========= MAIN =========== */
+
+main {
+   margin: 40px;
+}
+
+main .card {
+   margin: auto 50px;
+   margin-bottom: 20px;
+}
+
+main img {
+   width: auto;
+   height: 190px;
+}
+
+/* ====== FORMS =========== */
+
+form {
+   color: white;
+   background-color: #070707;
+   margin: 40px auto;
+   width: 30%;
+   text-align: center;
+}
+
+form .button {
+   margin-bottom: 20px;
+}
+
+/* ===== FOOTER ====== */
+
+footer {
+   display: flex;
+   background-image: url('../img/fondo.jpg');
+   background-size: 80%;
+   background-position: 40% 5%;
+   background-repeat: no-repeat;
+   background-color: black;
+   width: 100%;
+   height: 250px;
+   color: white;
+   font-size: 20px;
+   align-items: center;
+   justify-content: center;
+}
+
+
+/* ===== CAROUSEL ====== */
+
+.carousel img {
+   height: 750px;
+   width: 100vw;
+}
+
+/* =============== JUMBOCARD =============== */
+
+.jumbocard {
+
+   background-color: #070707;
+   color: white;
+   text-align: center;
+   height: 70vh;
+   width: 80vw;
+   top: 20vh;
+   left: 10vw;
+   padding: 20px 20px;
+
+   z-index: 2;
+   position: fixed;
+   visibility: hidden;
+   border-radius: 10px;
+   opacity: 0;
+   transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+.jumbocard.active {
+   visibility: visible;
+   opacity: 1;
+
+}
+
+.fa-close {
+   position: absolute;
+   top: 12px;
+   left: 12px;
+   font-size: 25px;
+}
+
+.jumbocard h5 {
+   margin-top: 20px;
+}
+
+.jumbocard img {
+   margin-top: 20px;
+   height: 300px;
+   width: auto;
+}
+
+#sobreNosotros .carousel-inner {
+   width: 75%;
+   height: 80%;
+   margin: auto auto;
+   text-align: center;
+
+}
+
+#sobreNosotros .carousel-item {
+   height: 386px;
+}
+
+#sobreNosotros .carousel-item img {
+   height: auto;
+   width: 260px;
+}
+
+#sobreNosotros .carousel-item p {
+   font-style: italic;
+   margin: auto;
+}
+
+#sobreNosotros .carousel-item .texto-medio {
+   margin-top: 5vw;
+   vertical-align: middle;
+
+}
+
+/* ======= BOOTSTRAP BREAKPOINT ======== */
+
+@media (max-width: 992px) {
+
+   nav {
+      font-size: 32px;
+   }
+
+   nav img {
+      height: 100px;
+      width: auto;
+   }
+
+   nav .navbar-toggler-icon {
+      width: 80px;
+      height: 80px;
+   }
+
+   header h1 {
+      font-size: 80px !important;
+      font-weight: 400 !important;
+   }
+
+   main .card {
+      margin-right: auto;
+      margin-left: auto;
+      width: 70vw !important;
+      font-size: 32px;
+   }
+
+   main .card h5 {
+      font-size: 35px;
+   }
+
+   main img {
+      height: 390px;
+      width: auto;
+   }
+
+   .carousel img {
+      height: 650px;
+      width: 100vw;
+   }
+
+   .jumbocard {
+      border-radius: 20px;
+   }
+
+   .jumbocard h3 {
+      margin-top: 100px;
+      font-size: 53px;
+   }
+
+   #cartaProductos p{
+      font-size: 36px;
+      margin-top: 4vh;
+   }
+
+   #cartaProductos img{
+      margin-top: 10vh;
+      height: auto;
+      width: 55vw;
+   }
+
+   #carouselnosotros .carousel-inner, #carouselnosotros .carousel-item {
+      height: 1000px;
+   }
+
+   #carouselnosotros .carousel-inner p {
+      font-size: 36px;
+   }
+
+   .carousel-control-prev-icon,
+   .carousel-control-next-icon {
+      width: 10rem !important;
+      height: 10rem !important;
+   }
+
+
+   #sobreNosotros .carousel-item img  {
+      margin-top: 10vh;
+      height: auto;
+      width: 55vw;
+   }
+
+   .fa-close {
+      font-size: 50px;
+      top: 20px;
+      left: 20px;
+   }
+
+   form h2{
+      font-size: 55px;
+   }
+
+   form .form-label, form .form-control, form .btn{
+      font-size: 36px;
+   }
+
+}
