@@ -1,287 +1,196 @@
-body {
-   margin: 0;
-   padding: 0;
-
+html, body{
+    font-family: 'Ubuntu', sans-serif;
+    background-color: white;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease;
 }
 
-.bg-img {
-   opacity: 0.2;
-   position: fixed;
-   z-index: -2;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: auto;
+html.active, body.active{
+    opacity: 1;
 }
 
-/*============== BARRA DE NAVEGACION ========== */
-
-nav {
-   font-weight: bold;
-   background-image: url('../img/fondo.jpg');
-   background-repeat: repeat;
-   background-size: auto 300px;
-}
-
-nav img {
-   height: 55px;
-   width: auto;
-}
-
-nav a {
-   color: white;
-   text-decoration: none;
-}
-
-nav a:hover {
-   text-shadow: 3px 3px 8px gold;
-}
-
-/* ======= HEADER ========== */
+h1, h2, h3, h4, h5, p, li{
+    user-select: none;
+} 
 
 header {
-   text-align: center;
+    height: 60px;
 }
 
-header h1 {
-   color: gray;
+.nav-link{
+    font-weight: light;
+    font-size: 25px;
+    color: dimgrey;
+    transition: font-size 0.1s ease;
 }
 
-header hr {
-   width: 350px;
-   margin: 0 auto;
-   color: black;
-   border: 2px solid;
+.nav-link.active{
+    font-weight: 550;
+    font-size: 26px;
+    color: royalblue;
 }
-
-header h2 {
-   margin: 0 auto;
-}
-
-/* ========= MAIN =========== */
 
 main {
-   margin: 40px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px); /* Subtract the height of the header element from the viewport height */
+    max-height: calc(100vh - 60px); /* Set a maximum height to prevent overflowing */
+    position: relative; /* Add relative positioning */
 }
 
-main .card {
-   margin: auto 50px;
-   margin-bottom: 20px;
+#main-carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Add absolute positioning */
+    top: 0; /* Position from the top */
+    left: 0; /* Position from the left */
 }
 
-main img {
-   width: auto;
-   height: 190px;
+.carousel-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
-/* ====== FORMS =========== */
-
-form {
-   color: white;
-   background-color: #070707;
-   margin: 40px auto;
-   width: 30%;
-   text-align: center;
+.carousel-item {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-form .button {
-   margin-bottom: 20px;
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    visibility: hidden;
 }
 
-/* ===== FOOTER ====== */
-
-footer {
-   display: flex;
-   background-image: url('../img/fondo.jpg');
-   background-size: 80%;
-   background-position: 40% 5%;
-   background-repeat: no-repeat;
-   background-color: black;
-   width: 100%;
-   height: 250px;
-   color: white;
-   font-size: 20px;
-   align-items: center;
-   justify-content: center;
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    font-size: 20px;
 }
 
-
-/* ===== CAROUSEL ====== */
-
-.carousel img {
-   height: 750px;
-   width: 100vw;
+.test-box{
+    width: 45vw;
+    height: 85vh;
+    background-color: darkorange;
+    display: flex;    /* --- this brake ---- */
+    margin-left: 120px;
+    padding: 15px;
 }
 
-/* =============== JUMBOCARD =============== */
-
-.jumbocard {
-
-   background-color: #070707;
-   color: white;
-   text-align: center;
-   height: 70vh;
-   width: 80vw;
-   top: 20vh;
-   left: 10vw;
-   padding: 20px 20px;
-
-   z-index: 2;
-   position: fixed;
-   visibility: hidden;
-   border-radius: 10px;
-   opacity: 0;
-   transition: opacity 0.7s ease, visibility 0.7s ease;
+.box-header {
+    text-align: center;
 }
 
-.jumbocard.active {
-   visibility: visible;
-   opacity: 1;
-
+.box-header p{
+    font-size: 16px;
+    font-style: italic;
+    text-align: left;
 }
 
-.fa-close {
-   position: absolute;
-   top: 12px;
-   left: 12px;
-   font-size: 25px;
+.box-header ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
 }
 
-.jumbocard h5 {
-   margin-top: 20px;
+.box-header ul li{
+    border-radius: 40px;
+    background-color: gainsboro;
+    margin: 10px;
+    line-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+   /*  font-weight: bold; */
+   transition: padding 0.5s ease;
 }
 
-.jumbocard img {
-   margin-top: 20px;
-   height: 300px;
-   width: auto;
+.box-header ul li:hover{
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
-#sobreNosotros .carousel-inner {
-   width: 75%;
-   height: 80%;
-   margin: auto auto;
-   text-align: center;
-
+.contact{
+    background-color: orange;
+    font-size: 100px;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
-#sobreNosotros .carousel-item {
-   height: 386px;
+.contact i{
+    margin: 20px 20px;
+    background-color: red;
 }
 
-#sobreNosotros .carousel-item img {
-   height: auto;
-   width: 260px;
+.kirbo{
+    position: absolute;
+    z-index: 1;
+    top: 22%;
+    left: 55%;
+    width: 500px;
+    transition: width 2s ease;
 }
 
-#sobreNosotros .carousel-item p {
-   font-style: italic;
-   margin: auto;
+.kirbo-bot{
+    display: none;
 }
 
-#sobreNosotros .carousel-item .texto-medio {
-   margin-top: 5vw;
-   vertical-align: middle;
-
+.kirbo:hover{
+    width: 525px;
 }
 
-/* ======= BOOTSTRAP BREAKPOINT ======== */
-
-@media (max-width: 992px) {
-
-   nav {
-      font-size: 32px;
-   }
-
-   nav img {
-      height: 100px;
-      width: auto;
-   }
-
-   nav .navbar-toggler-icon {
-      width: 80px;
-      height: 80px;
-   }
-
-   header h1 {
-      font-size: 80px !important;
-      font-weight: 400 !important;
-   }
-
-   main .card {
-      margin-right: auto;
-      margin-left: auto;
-      width: 70vw !important;
-      font-size: 32px;
-   }
-
-   main .card h5 {
-      font-size: 35px;
-   }
-
-   main img {
-      height: 390px;
-      width: auto;
-   }
-
-   .carousel img {
-      height: 650px;
-      width: 100vw;
-   }
-
-   .jumbocard {
-      border-radius: 20px;
-   }
-
-   .jumbocard h3 {
-      margin-top: 100px;
-      font-size: 53px;
-   }
-
-   #cartaProductos p{
-      font-size: 36px;
-      margin-top: 4vh;
-   }
-
-   #cartaProductos img{
-      margin-top: 10vh;
-      height: auto;
-      width: 55vw;
-   }
-
-   #carouselnosotros .carousel-inner, #carouselnosotros .carousel-item {
-      height: 1000px;
-   }
-
-   #carouselnosotros .carousel-inner p {
-      font-size: 36px;
-   }
-
-   .carousel-control-prev-icon,
-   .carousel-control-next-icon {
-      width: 10rem !important;
-      height: 10rem !important;
-   }
-
-
-   #sobreNosotros .carousel-item img  {
-      margin-top: 10vh;
-      height: auto;
-      width: 55vw;
-   }
-
-   .fa-close {
-      font-size: 50px;
-      top: 20px;
-      left: 20px;
-   }
-
-   form h2{
-      font-size: 55px;
-   }
-
-   form .form-label, form .form-control, form .btn{
-      font-size: 36px;
-   }
-
+.kirbo:active {
+    pointer-events: none;
 }
+
+@media only screen and (max-width: 1170px) {
+
+   .carousel-item{
+    margin-top: 0 !important;
+   }
+
+    .test-box{
+        padding: 25px;
+        width: 100vw;
+        margin: 0;
+    }
+
+    .kirbo{
+        display: none;
+    }
+
+    .box-header h1{
+        font-size: 38px;
+    }
+
+    .box-header p{
+        font-size: 14x;
+    }
+
+    .kirbo-bot{
+        display: block;
+        position: absolute;
+        z-index: 1;
+        bottom: 2%;
+        left: 2%;
+        width: 100px;
+        transition: width 0.7s ease;
+    }
+
+    .kirbo-bot:hover{
+        width: 120px;
+    }
+    .kirbo-bot:active {
+        pointer-events: none;
+    }
+  }
