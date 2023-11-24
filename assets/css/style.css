@@ -83,6 +83,12 @@ footer{
     padding: 15px;
 }
 
+.project-box{
+    width: 60%;
+    height: 50%;
+    background-color: olive;
+}
+
 .box-header {
     text-align: center;
 }
@@ -118,9 +124,11 @@ footer{
 }
 
 .contact{
-    background-color: orange;
+    /* background-color: orange; */
     font-size: 100px;
-    width: 50%;
+    width: 70%;
+    height: 70%;
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -128,8 +136,14 @@ footer{
 }
 
 .contact i{
+    font-size: larger;
     margin: 20px 20px;
-    background-color: red;
+    transition: color 1s ease;
+    /* background-color: red; */
+}
+
+.contact i:hover{
+    color: royalblue;
 }
 
 .kirbo{
