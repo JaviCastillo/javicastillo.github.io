@@ -84,8 +84,9 @@ footer{
 }
 
 .project-box{
-    width: 60%;
-    height: 50%;
+    width: 200px;
+    height: 50px;
+    border-style: solid;
     background-color: olive;
 }
 
@@ -143,7 +144,7 @@ footer{
 }
 
 .contact i:hover{
-    color: royalblue;
+    color: palevioletred;
 }
 
 .kirbo{
@@ -167,6 +168,10 @@ footer{
     pointer-events: none;
 }
 
+
+/* ==================== MOBILE ============================= */
+
+
 @media only screen and (max-width: 1170px) {
 
    .carousel-item{
@@ -177,6 +182,10 @@ footer{
         padding: 25px;
         width: 100vw;
         margin: 0;
+    }
+
+    .txt-stack{
+        display: none;
     }
 
     .kirbo{
@@ -193,7 +202,7 @@ footer{
 
     .kirbo-bot{
         display: block;
-        position: absolute;
+        position: fixed;
         z-index: 1;
         bottom: 2%;
         left: 2%;
@@ -207,4 +216,32 @@ footer{
     .kirbo-bot:active {
         pointer-events: none;
     }
+
+    .contact{
+        /* background-color: orange; */
+        font-size: 60px;
+        width: 70%;
+        height: 70%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .contact i{
+        font-size: larger;
+        margin: 20px 20px;
+        transition: color 1s ease;
+        /* background-color: red; */
+    }
+
+    footer{
+        font-size: medium;
+        position: fixed;
+    }
+
+  /*   .carousel-item{
+        margin-bottom: 0;
+    } */
   }
