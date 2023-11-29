@@ -77,7 +77,7 @@ footer{
 .test-box{
     width: 45vw;
     height: 85vh;
-    background-color: darkorange;
+    /* background-color: darkorange; */
     display: flex;    /* --- this brake ---- */
     margin-left: 120px;
     padding: 15px;
@@ -95,22 +95,31 @@ footer{
     margin: auto;
 }
 
-.project-box-a{
+.project-box{
     width: 85%;
     height: 14vh;
-    margin: 3vh 0;
     border-radius: 100px;
     border-style: solid;
     background-color: olive;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.project-box-b{
-    width: 85%;
-    height: 14vh;
+.project-box>a{
+    color: black;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+
+.pb-a{
+    margin: 3vh 0;
+}
+
+.pb-b{
     margin: 3vh 0 3vh auto;
-    border-radius: 100px;
-    border-style: solid;
-    background-color: olive;
 }
 
 .box-header {
