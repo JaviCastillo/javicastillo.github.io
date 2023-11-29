@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    /* (function(){document.querySelector("html").requestFullscreen();})(); */
+
     $('html').addClass('active');
     $('body').addClass('active');
 

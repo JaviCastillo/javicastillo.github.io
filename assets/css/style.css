@@ -81,11 +81,34 @@ footer{
     display: flex;    /* --- this brake ---- */
     margin-left: 120px;
     padding: 15px;
+    overflow: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
 }
 
-.project-box{
-    width: 200px;
-    height: 50px;
+.test-box::-webkit-scrollbar {  /* Chrome, Safari and Opera */
+    display: none;
+}
+
+.projects-container{
+    width: 100%;
+    margin: auto;
+}
+
+.project-box-a{
+    width: 85%;
+    height: 14vh;
+    margin: 3vh 0;
+    border-radius: 100px;
+    border-style: solid;
+    background-color: olive;
+}
+
+.project-box-b{
+    width: 85%;
+    height: 14vh;
+    margin: 3vh 0 3vh auto;
+    border-radius: 100px;
     border-style: solid;
     background-color: olive;
 }
@@ -116,10 +139,11 @@ footer{
     padding-left: 20px;
     padding-right: 20px;
    /*  font-weight: bold; */
-   transition: padding 0.5s ease;
+   transition: padding 0.5s ease, background-color 0.5s ease;
 }
 
 .box-header ul li:hover{
+    background-color: rgb(248, 230, 230);
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -145,6 +169,10 @@ footer{
 
 .contact i:hover{
     color: palevioletred;
+}
+
+.contact i:active{
+    color: rgb(180, 61, 180);
 }
 
 .kirbo{
