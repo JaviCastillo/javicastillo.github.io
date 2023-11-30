@@ -99,20 +99,30 @@ footer{
     width: 85%;
     height: 14vh;
     border-radius: 100px;
-    border-style: solid;
-    background-color: olive;
+    /* border-style: solid; */
+    background-color: rgba(240, 128, 128, 0.534);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    transition: width 0.5s ease;
+}
+
+.project-box:hover{
+    width: 100%;
 }
 
 .project-box>a{
-    color: black;
-    font-weight: bolder;
-    font-size: larger;
+    color: white;
+    font-weight:600;
+    font-size: 30px;
+    text-decoration: none;
+    transition: color 0.5s ease;
 }
 
+.project-box>a:hover{
+    color: rgb(102, 132, 223);
+}
 
 .pb-a{
     margin: 3vh 0;
