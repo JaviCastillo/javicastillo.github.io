@@ -179,6 +179,10 @@ footer{
     align-items: center;
 }
 
+.contact a{
+    color: black;
+}
+
 .contact i{
     font-size: larger;
     margin: 20px 20px;
